@@ -1,0 +1,3 @@
+com\demo\order\controller\OrderControllerTest.class
+com\demo\order\repository\OrderRepositoryTest.class
+com\demo\order\service\OrderServiceTest.class

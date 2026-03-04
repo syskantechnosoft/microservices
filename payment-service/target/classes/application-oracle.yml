@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@oracle-sim:1521/ORCLPDB1
+    username: app
+    password: app
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect

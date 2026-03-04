@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS orders (
+  id BIGSERIAL PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  product_id BIGINT NOT NULL,
+  quantity INTEGER NOT NULL,
+  status VARCHAR(100) NOT NULL,
+  payment_status VARCHAR(100) NOT NULL,
+  created_at TIMESTAMP NOT NULL
+);
