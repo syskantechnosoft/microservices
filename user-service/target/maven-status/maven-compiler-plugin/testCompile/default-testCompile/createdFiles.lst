@@ -1,0 +1,4 @@
+com\demo\user\integration\UserServiceIntegrationTest.class
+com\demo\user\repository\ProductRepositoryTest.class
+com\demo\user\controller\UserControllerTest.class
+com\demo\user\service\UserServiceTest.class
