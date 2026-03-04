@@ -1,0 +1,29 @@
+server:
+  port: 9003
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/orderdb
+    username: app
+    password: app
+    driver-class-name: org.postgresql.Driver
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      paymentService:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 20s
+  retry:
+    instances:
+      paymentService:
+        maxAttempts: 3
+        waitDuration: 500ms
+  timelimiter:
+    instances:
+      paymentService:
+        timeoutDuration: 2s
+  bulkhead:
+    instances:
+      paymentService:
+        maxConcurrentCalls: 10

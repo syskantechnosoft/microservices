@@ -1,0 +1,18 @@
+server:
+  port: 9004
+spring:
+  datasource:
+    url: jdbc:h2:mem:paymentdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+app:
+  oracle-simulation:
+    enabled: true
+    jdbc-url: jdbc:oracle:thin:@oracle-sim:1521/ORCLPDB1
+    username: app
+    password: app
