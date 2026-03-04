@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: auth-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+app:
+  security:
+    jwt:
+      secret: dGhpc0lzQVN1cGVyU2VjdXJlVGVhY2hpbmdEZW1vS2V5MTIzNDU2Nzg5MDE=

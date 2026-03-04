@@ -1,0 +1,11 @@
+{
+  "annotations": {"list": []},
+  "panels": [
+    {"title": "Request Throughput", "type": "timeseries", "targets": [{"expr": "sum(rate(http_server_requests_seconds_count[1m]))"}]},
+    {"title": "Error Rate", "type": "timeseries", "targets": [{"expr": "sum(rate(http_server_requests_seconds_count{status=~\"5..\"}[1m]))"}]},
+    {"title": "JVM Memory", "type": "timeseries", "targets": [{"expr": "sum(jvm_memory_used_bytes)"}]}
+  ],
+  "title": "Microservices Overview",
+  "schemaVersion": 39,
+  "version": 1
+}

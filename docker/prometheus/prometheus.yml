@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: discovery-server
+    static_configs:
+      - targets: ["discovery-server:8761"]
+    metrics_path: /actuator/prometheus
+
+  - job_name: config-server
+    static_configs:
+      - targets: ["config-server:8888"]
+    metrics_path: /actuator/prometheus
+
+  - job_name: gateway
+    static_configs:
+      - targets: ["api-gateway:8080"]
+    metrics_path: /actuator/prometheus
+
+  - job_name: services
+    static_configs:
+      - targets: ["auth-service:9001", "user-service:9002", "order-service:9003", "payment-service:9004", "notification-service:9005"]
+    metrics_path: /actuator/prometheus
